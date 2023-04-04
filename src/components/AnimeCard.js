@@ -6,5 +6,5 @@ export default function AnimeCard({anime}){
                 <h3>{anime.title}</h3>
             </span>
         </article>
-    )
+    );
 }

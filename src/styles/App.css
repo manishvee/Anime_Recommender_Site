@@ -1,4 +1,7 @@
 .topanime--list{
   display: flex;
 }
+.searched--list{
+  display : flex; 
+}
 
