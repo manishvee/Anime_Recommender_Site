@@ -9,6 +9,7 @@ function App() {
   const [search, SetSearch] = useState("");
   const [searchStatus,SetSearchStatus] = useState(true); 
   
+
   const GetTopAnime = async () => {
     const response = await fetch('https://api.jikan.moe/v4/top/anime').then((res) => res.json());
     SetTopAnime(response.data) 
@@ -24,28 +25,30 @@ function App() {
       console.log(query); 
 		SetAnimeList(response.data);
 	}
+
+  
+  
+
+
   useEffect(()=>{
     GetTopAnime();
   },[]) 
+
+
   return (
-    <div className="App"> 
+    <div className='App'>
       <Header
-      	HandleSearch={HandleSearch}
+        HandleSearch={HandleSearch}
         search={search}
         SetSearch={SetSearch}
         animeList={animeList}
         SetSearchStatus={SetSearchStatus}
-      /> 
-      {
-        searchStatus?
-        <TopAiring topAnime = {topAnime}/>
-        : 
-        <Searched 
-        search = {search}
-        animeList= {animeList}
-       />   
-      }
-   
+      />
+      {searchStatus ? (
+        <TopAiring topAnime={topAnime} />
+      ) : (
+        <Searched search={search} animeList={animeList} />
+      )}
     </div>
   );
 }
