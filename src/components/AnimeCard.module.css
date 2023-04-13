@@ -1,0 +1,10 @@
+.animeCard{
+    height: 20rem;
+    width: 5rem;
+    object-fit: cover;
+    padding: 0.5rem;
+}
+.images{
+    height: 100%;
+    width: 100%;
+}

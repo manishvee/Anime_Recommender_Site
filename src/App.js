@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './styles/App.css';
 import Header from './components/Header.js';
 import TopAiring from './components/TopAiring';
 import Searched from './components/Searched';
@@ -48,7 +47,7 @@ function App() {
   console.log(userData);
 
   return (
-    <div className='App'>
+    <div> 
       <h2>{userData.length !== 0 && userData[0].name}</h2>
       <Header
         HandleSearch={HandleSearch}

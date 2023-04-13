@@ -1,5 +1,7 @@
-.topanime--list{
+.topanimeList{
   display: flex;
+  margin: 1rem;
+  padding: 0.5rem;
 }
 .searched--list{
   display : flex; 
