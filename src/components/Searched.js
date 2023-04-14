@@ -1,10 +1,13 @@
 import AnimeCard from "./AnimeCard"
+import HeadingText from "./HeadingText";
+import styles from './ScrollableList.module.css'
+import React from 'react'
+
 export default function Searched(props) {
-    console.log("helo");
     return (
       <div>
-        <h2>Results for {props.search}</h2>
-        <div className="searched--list">
+        <HeadingText text={"Search results for "+ props.search}/>
+        <div className={styles.scrollableList}>
           {props.animeList.map((anime) => (
             <AnimeCard anime={anime} key={anime.mal_id} />
           ))}

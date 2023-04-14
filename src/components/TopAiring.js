@@ -1,14 +1,13 @@
 import AnimeCard from "./AnimeCard"
-import styles from './TopAiring.module.css'
+import styles from './ScrollableList.module.css'
+import React from 'react'
+
 export default function TopAiring({topAnime}) {
     return (
-      <div>
-        <h2>Top Airing</h2>
-        <div className={styles.topanimeList}>
+        <div className={styles.scrollableList}>
           {topAnime.map((anime) => (
             <AnimeCard anime={anime} key={anime.mal_id} />
           ))}
         </div>
-      </div>
     );
 }
