@@ -6,7 +6,7 @@ import Searched from './Searched.js';
 import HeadingText from './HeadingText.js';
 import React from 'react';
 
-function Home() {
+function Home({login, Setlogin}) {
   const [topAnime, SetTopAnime] = useState([]);
   const [animeList, SetAnimeList] = useState([]);
   const [search, SetSearch] = useState('');
@@ -48,6 +48,8 @@ function Home() {
         SetSearch={SetSearch}
         animeList={animeList}
         SetSearchStatus={SetSearchStatus}
+        login={login}
+        Setlogin={Setlogin}
       />
       {searchStatus ? (
         <div>

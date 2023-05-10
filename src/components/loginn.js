@@ -20,7 +20,7 @@ const LoginPage = ({login, Setlogin}) => {
   const handleLogin = (event) => {
     if (username === 'admin' && password === 'admin') {
       console.log('Login successful');
-      Setlogin(!login)
+      Setlogin(true)
       // Redirect the user to the home page or perform any other necessary actions
     } else {
       console.log('Invalid username or password');
