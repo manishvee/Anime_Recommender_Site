@@ -29,10 +29,13 @@
 }
 
 .searchBar {
-    width: 0;
-    height: 3rem;
+    position: absolute;
+    left:13%;
+    width: 1rem;
+    height: 2.5rem;
     padding: 0;
     border: none;
+    
 }
 
 .searchIcon {
@@ -40,8 +43,8 @@
     margin-left: 0.6rem;
     border-radius: 50%;
     border-style: none;
-    height: 3rem;
-    width: 3rem;
+    height: 3.2rem;
+    width: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,8 +55,11 @@
 }
 
 .searchBar:hover{
-    width: 10rem;
-    border-radius: 10%;
+    width: 14rem;
+    height:3.2rem;
+     border:none;
+     border-radius:20px;
+   
 }
 
 .spacer {
