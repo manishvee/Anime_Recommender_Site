@@ -5,13 +5,14 @@ import AnimeTrailer from './AnimeTrailer.js';
 import Searched from './Searched.js';
 import HeadingText from './HeadingText.js';
 import React from 'react';
+import { AnimeInfo } from './AnimeInfo.js';
 
 function Home({login, Setlogin}) {
   const [topAnime, SetTopAnime] = useState([]);
   const [animeList, SetAnimeList] = useState([]);
   const [search, SetSearch] = useState('');
   const [searchStatus, SetSearchStatus] = useState(true);
-
+  const [animeInfo,setAnimeInfo]=useState('')
   const GetTopAnime = async () => {
     const response = await fetch('https://api.jikan.moe/v4/top/anime').then(
       (res) => res.json()
@@ -51,10 +52,13 @@ function Home({login, Setlogin}) {
         login={login}
         Setlogin={Setlogin}
       />
+      {animeInfo && <AnimeInfo animeInfo={animeInfo}/>}
       {searchStatus ? (
         <div>
+          
           <HeadingText text='Top Anime' />
-          <TopAiring topAnime={topAnime} />
+          <TopAiring topAnime={topAnime}
+          setAnimeInfo={setAnimeInfo} />
         </div>
       ) : (
         <div>
