@@ -11,6 +11,9 @@
     align-items: center;
     border-radius: 0 0 1rem 1rem;
 }
+body{
+    background-color: #1A1A1A; 
+}
 
 .homeIcon {
     background: white;

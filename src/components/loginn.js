@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+import '../Fonts/Kanit/Kanit-Medium.ttf'
 import styles from "./LoginPage.module.css"
 
 import { useState } from 'react';
@@ -29,30 +29,33 @@ const LoginPage = ({login, Setlogin}) => {
   };
 
     return (
-      <div class={styles.loginpage}>
-        <h1>Login Page</h1>
-        <form onSubmit={handleLogin}>
+      <article className={styles.loginpage}>
+        <h1 className={styles.heading}>Login</h1>
+        <form onSubmit={handleLogin} className={styles.formstart}>
           <div>
-            <label htmlFor='username'>Username:</label>
-            <input
+             <input 
+              className={styles.input_text}
               type='text'
               id='username'
+              placeholder='Enter Username'
               value={username}
               onChange={handleUsernameChange}
             />
           </div>
           <div>
-            <label htmlFor='password'>Password:</label>
-            <input
+            <br></br>
+            <input className ={styles.input_password}
               type='password'
               id='password'
+              placeholder='Enter Password'
               value={password}
               onChange={handlePasswordChange}
             />
           </div>
-          <button type='submit'>Login</button>
+        
+          <button type='submit' className={styles.button_submit}>Login</button>
         </form>
-      </div>
+      </article>
     );
 }
 export default LoginPage;
