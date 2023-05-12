@@ -7,10 +7,14 @@
     transition: 0.3s;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    
 }
 
-.animeCard:hover{
+.animeCard:hover .overlay{
     transform: scale(1.1);
+    opacity: 1;
+    height: 90%;
+        
 }
 
 .images {
@@ -21,8 +25,9 @@
 }
 
 .cardContainer{
-    position: relative;
     text-overflow: clip;
+    position: relative;
+
 }
 
 @font-face {
@@ -53,3 +58,25 @@
     font-weight: 400;
     font-size: 1.25rem;
 }
+
+    .overlay{
+        position: absolute;
+        bottom: 0;
+        width: 15rem;
+        height: 0;
+        padding: 1rem;
+       /* background-color: rgba(212,187,163,0.9);*/
+       background-color: white;
+        border-radius: 10rem 3rem 0 0 ;
+        text-align: justify;
+        opacity: 0;
+        transition: 0.5s;
+    }
+ .synopsis{
+        width: 80%;
+        height: 50%;
+        margin: 0 auto;
+        padding: 1rem;
+        overflow: auto;
+    }
+   

@@ -4,10 +4,11 @@ import React from 'react'
 
 export default function TopAiring({topAnime,setAnimeInfo}) {
     return (
-        <div className={styles.scrollableList} onClick={()=>setAnimeInfo(topAnime)}>
+        <div className={styles.scrollableList} >
           {topAnime.map((anime) => (
-            <AnimeCard anime={anime} key={anime.mal_id} />
+            <AnimeCard anime={anime}  key={anime.mal_id} setAnimeInfo={setAnimeInfo}/>
           ))}
+          
         </div>
     );
 }
