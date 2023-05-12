@@ -52,12 +52,15 @@ function Home({login, Setlogin}) {
         login={login}
         Setlogin={Setlogin}
       />
-      {animeInfo && <AnimeInfo animeInfo={animeInfo}/>}
+      
+      { animeInfo && <AnimeInfo animeInfo={animeInfo}/>}
       {searchStatus ? (
         <div>
           
           <HeadingText text='Top Anime' />
-          <TopAiring topAnime={topAnime} />
+          <TopAiring topAnime={topAnime}
+          setAnimeInfo={setAnimeInfo} />
+          
           </div>
       ) : (
         <div>

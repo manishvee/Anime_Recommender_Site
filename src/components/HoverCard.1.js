@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 import '../Fonts/Kanit/Kanit-Medium.ttf'
+import styles from './HoverCard.module.css'
 
-export default function AnimeCard({anime}){
+export default function HoverCard({ anime }) {
     return (
         <>
-            <div>
-                <img alt='' src={anime.images.jpg.small_image_url}/>
+            <div class={styles.Hovercard}>
+                <img alt='' src={anime.images.jpg.small_image_url} />
                 <p>{anime.title}</p>
                 <p>{anime.title_japanese}</p>
                 <p>Type:{anime.type}</p>

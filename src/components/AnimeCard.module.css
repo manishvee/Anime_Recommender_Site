@@ -10,8 +10,8 @@
     
 }
 
-.animeCard:hover .overlay{
-    transform: scale(1.1);
+.animeCard:hover .overlay {
+    transform: scale(1);
     opacity: 1;
     height: 90%;
         
@@ -62,15 +62,16 @@
     .overlay{
         position: absolute;
         bottom: 0;
-        width: 15rem;
+        width: 13rem;
         height: 0;
         padding: 1rem;
        /* background-color: rgba(212,187,163,0.9);*/
        background-color: white;
-        border-radius: 10rem 3rem 0 0 ;
+        border-radius: 3rem 0 0 0 ;
         text-align: justify;
         opacity: 0;
         transition: 0.5s;
+        font-family: "KanitMedium";
     }
  .synopsis{
         width: 80%;

@@ -1,13 +1,13 @@
 import React from 'react'
 import '../Fonts/Kanit/Kanit-Medium.ttf'
-import HoverCard from './HoverCard'
+import HoverCard from "./HoverCard.1"
 export const AnimeInfo = (props) => {
     
    return (     
    <>
-         {props.animeInfo.map((anime)=>(
-         <HoverCard anime={anime} key={anime.mal_id}/>
-         ))}
+         
+         <HoverCard anime={props.animeInfo}/>
+      
         </>
    )
          }  
