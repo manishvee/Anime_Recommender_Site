@@ -2,16 +2,16 @@ import React from 'react'
 
 import '../Fonts/Kanit/Kanit-Medium.ttf'
 import styles from "./LoginPage.module.css"
-import { useNavigate } from 'react-router-dom';
+
 import { useState } from 'react';
+import SigninForm from './Signup';
 
 const LoginPage = ({login, Setlogin}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
+  function handleUsernameChange(event) {
+      setUsername(event.target.value);
+    }
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -53,7 +53,7 @@ const LoginPage = ({login, Setlogin}) => {
             />
           </div>
            <button type='submit' className={styles.button_submit}>Login</button>
-           <div>Already have an account?<a href ='' >Signin</a></div>
+           <div>Already have an account?<a href =''>Signin</a></div>
           
         </form>
       </article>
