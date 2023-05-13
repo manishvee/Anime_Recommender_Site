@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../Fonts/Kanit/Kanit-Medium.ttf'
 import styles from "./LoginPage.module.css"
-
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const LoginPage = ({login, Setlogin}) => {
@@ -16,7 +16,7 @@ const LoginPage = ({login, Setlogin}) => {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-
+  
   const handleLogin = (event) => {
     if (username === 'admin' && password === 'admin') {
       console.log('Login successful');
@@ -52,8 +52,9 @@ const LoginPage = ({login, Setlogin}) => {
               onChange={handlePasswordChange}
             />
           </div>
-        
-          <button type='submit' className={styles.button_submit}>Login</button>
+           <button type='submit' className={styles.button_submit}>Login</button>
+           <div>Already have an account?<a href ='' >Signin</a></div>
+          
         </form>
       </article>
     );
