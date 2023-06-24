@@ -2,9 +2,7 @@ import React from 'react'
 
 import '../Fonts/Kanit/Kanit-Medium.ttf'
 import styles from "./LoginPage.module.css"
-
 import { useState } from 'react';
-import SigninForm from './Signup';
 
 const LoginPage = ({login, Setlogin}) => {
   const [username, setUsername] = useState('');
@@ -27,6 +25,7 @@ const LoginPage = ({login, Setlogin}) => {
       // Display an error message or perform any other necessary actions
     }
   };
+
 
     return (
       <article className={styles.loginpage}>
