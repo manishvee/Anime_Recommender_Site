@@ -86,19 +86,11 @@ function Home({login, Setlogin}) {
   GetRecommendations(); 
   useEffect(() => {
     promises();
-  // (async () => {
-  //   const promiseArray = recommendation.map((id) => FetchRecommendations(id));
-  //   const resolvedPromises = await Promise.all(promiseArray);
-  
-  //   // Set the state with the resolved data
-  //   SetRecList(resolvedPromises);
-  
-  //   console.log(resolvedPromises); // Output the resolved data
-  // })();
+
     GetTopAnime();
     return () => {
       // GetRecommendations();
-      // promises();
+      promises();
       GetTopAnime();
 
     };
